@@ -8,6 +8,13 @@ To simplify, the face recognition module does not require to run epochs or train
 
 
 How to use:
+make sure to create new subfolder under static called faces and create another subfolder inside it respectively to their prototype names
+for example make sure to have the following subfolders:
+
+static/faces/CNNalgo
+static/faces/MediaPipealgo
+static/faces/SVCalgo
+
 Only run app.py
 
 Do not worry about requirements.txt as you try to run the app.py you will see what module you are short on and simply type 'pip install <name of module/can find on google>'
