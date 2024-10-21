@@ -17,3 +17,5 @@ Test was conducted on python v3.12
 
 Images of faces are saved in different folders based on their respective name of the protoype. for example face recognition project, i save the image files under the subfolder face_rec
 while the rest under the subfolder static
+
+you are free to use and update my codes especially the prototypes for other algorithms than facereco. this does not require further update anymore.
