@@ -15,7 +15,7 @@ contourpy==1.3.0
 cycler==0.12.1
 debugpy==1.8.7
 decorator==5.1.1
-dlib==19.24.6
+dlib --only-binary=:all:
 et-xmlfile==1.1.0
 executing==2.1.0
 face-recognition==1.3.0
