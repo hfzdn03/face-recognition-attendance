@@ -14,3 +14,6 @@ Do not worry about requirements.txt as you try to run the app.py you will see wh
 the other prototype.py you are seeing is just backup to run on app.py. For instance if you want to update a prototype algorithm, copy and replace all in app.py as at the moment app.py has its backup in the file name 'prototypefacereco.py'
 
 Test was conducted on python v3.12
+
+Images of faces are saved in different folders based on their respective name of the protoype. for example face recognition project, i save the image files under the subfolder face_rec
+while the rest under the subfolder static
