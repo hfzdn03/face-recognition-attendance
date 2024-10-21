@@ -19,6 +19,18 @@ unknown_threshold = 0.5  # Adjusted threshold for recognizing unknown faces
 # Global variable to track progress
 loading_progress = 0
 
+# Create necessary directories if they do not exist
+directories = [
+    'static/faces/CNNalgo',
+    'static/faces/MediaPipealgo',
+    'static/faces/SVCalgo',
+    'face_rec'
+]
+
+for directory in directories:
+    if not os.path.isdir(directory):
+        os.makedirs(directory)
+
 def load_faces_and_update_progress():
     global loading_progress
     
