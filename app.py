@@ -107,9 +107,6 @@ def identify_face(face_encoding):
     else:
         return "Unknown"
 
-MIN_DETECTION_DURATION = timedelta(seconds=2)
-DETECTION_TIMEOUT = timedelta(seconds=1)
-
 # Initialize a dictionary to store detection times
 detection_start_time = {}
 
