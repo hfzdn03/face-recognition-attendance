@@ -19,6 +19,7 @@ most importantly for requirements, you may do 'pip install -r requirements.txt' 
 this is because you are going to need that cmake functions in the visual build tool in order to run face reco module from python(for cnn this is unnecessary)
 ![image](https://github.com/user-attachments/assets/daffa94e-7c96-46c4-b9c1-5e6afd7d69a7)
 
+if still not working, do download and install cmake from it's official website
 
 then run app.py
 for facereco prototype, make sure to click on reload dataset after image capture then you may click on take attendance to start detecting
