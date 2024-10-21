@@ -169,8 +169,8 @@ detection_start_time = {}
 def start():
     """Start the face recognition process"""
     cap = cv2.VideoCapture(0)
-    cap.set(3, 640)  # Set width to 640 (or higher if your camera supports it)
-    cap.set(4, 480)  # Set height to 480 (or higher)
+    cap.set(3, 480)  # Set width to 640 (or higher if your camera supports it)
+    cap.set(4, 360)  # Set height to 480 (or higher)
     cap.set(cv2.CAP_PROP_FPS, 30)  # Set to 30 FPS for smoother capture
     cv2.namedWindow('Attendance', cv2.WND_PROP_FULLSCREEN)
 
