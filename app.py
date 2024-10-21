@@ -152,17 +152,18 @@ DETECTION_TIMEOUT = timedelta(seconds=2)  # 2 seconds
 # Initialize a dictionary to store the detection start time for each face
 detection_start_time = {}
 
+# a detection that can be done from further away but a bit laggy
 @app.route('/start', methods=['GET'])
 def start():
     """Start the face recognition process"""
     cap = cv2.VideoCapture(0)
-    cap.set(3, 320)  # Set width to 320
-    cap.set(4, 240)  # Set height to 240
+    cap.set(3, 640)  # Set width to 640 (or higher if your camera supports it)
+    cap.set(4, 480)  # Set height to 480 (or higher)
     cap.set(cv2.CAP_PROP_FPS, 30)  # Set to 30 FPS for smoother capture
     cv2.namedWindow('Attendance', cv2.WND_PROP_FULLSCREEN)
 
     face_data = []
-    process_interval = 10  # Process every 10 frames
+    process_interval = 5  # Process every 5 frames to reduce load
     frame_count = 0
 
     while True:
@@ -170,11 +171,9 @@ def start():
         if not ret:
             break
 
-        # Process the frame every 10th iteration
+        # Process the frame every 'process_interval' frames
         if frame_count % process_interval == 0:
-            # Resize frame to 1/4 size for faster face recognition processing
-            small_frame = cv2.resize(frame, (0, 0), fx=0.25, fy=0.25)
-            rgb_frame = cv2.cvtColor(small_frame, cv2.COLOR_BGR2RGB)
+            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             
             # Use HOG model for faster face location detection
             face_locations = fr.face_locations(rgb_frame, model="hog")  
@@ -183,7 +182,6 @@ def start():
             # Reset face_data only after processing new frame
             face_data = []
             for (top, right, bottom, left), face_encoding in zip(face_locations, face_encodings):
-                top, right, bottom, left = [v * 4 for v in (top, right, bottom, left)]  # Scale back up
                 name = identify_face(face_encoding)
                 face_data.append((name, (left, top, right, bottom)))
 
