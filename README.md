@@ -11,9 +11,9 @@ How to use:
 make sure to create new subfolder under static called faces and create another subfolder inside it respectively to their prototype names
 for example make sure to have the following subfolders:
 
-static/faces/CNNalgo
-static/faces/MediaPipealgo
-static/faces/SVCalgo
+1. static/faces/CNNalgo
+2. static/faces/MediaPipealgo
+3. static/faces/SVCalgo
 
 Only run app.py
 
