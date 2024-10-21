@@ -31,5 +31,6 @@ you are free to use and update my codes especially the prototypes for other algo
 Facereco prototype:
 ![image](https://github.com/user-attachments/assets/65f319f2-9f1c-4528-8282-d7003b115cfc)
 
+Uses iphone camera because of no built-in webcam. you may try as well with the app 'droidcam' can find in appstore
 ![image](https://github.com/user-attachments/assets/eed6b28f-b0f3-40f2-bbdd-aa6f80fd08cc)
 ![image](https://github.com/user-attachments/assets/fbf672f9-0102-4694-a08a-c89e79843cca)
