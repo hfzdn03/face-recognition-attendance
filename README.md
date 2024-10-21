@@ -18,8 +18,7 @@ for example make sure to have the following subfolders:
 then run app.py
 for facereco prototype, make sure to click on reload dataset after image capture then you may click on take attendance to start detecting
 
-Do not worry about requirements.txt as you try to run the app.py you will see what module you are short on and simply type 'pip install <name of module/can find on google>'
-the other prototype.py you are seeing is just backup to run on app.py. For instance if you want to update a prototype algorithm, copy and replace all in app.py as at the moment app.py has its backup in the file name 'prototypefacereco.py'
+The other prototype.py you are seeing is just backup to run on app.py. For instance if you want to update a prototype algorithm, copy and replace all in app.py as at the moment app.py has its backup in the file name 'prototypefacereco.py'
 
 Test was conducted on python v3.12
 
