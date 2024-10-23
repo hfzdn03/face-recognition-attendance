@@ -148,25 +148,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script>
-        function checkProgress() {
-            $.get('/progress', function(data) {
-                $('#progress-value').text(data.progress);
-                $('#progress-fill').css('width', data.progress + '%');
-
-                if (data.progress >= 100) {
-                    $('#completion-message').show();
-                    setTimeout(function() {
-                        location.reload();  // Refresh the page after 2 seconds
-                    }, 2000);
-                } else {
-                    setTimeout(checkProgress, 1000);  // Check progress every second
-                }
-            });
-        }
-
         $(document).ready(function() {
             checkProgress();  // Start checking progress when the document is ready
         });
+        
         $(document).ready(function() {
             // Fetch users and display in modal
             $('#show-users').on('click', function() {
